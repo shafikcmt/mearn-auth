@@ -8,15 +8,15 @@ function Login() {
     const [msg,setMsg] = useState('');
     const naviagte = useNavigate()
 const handleLogin = (e)=>{
-    e.preventDefault()
-    axios.post('http:localhost:3000/login/',{email,password})
+    e.preventDefault()  
+    axios.post('http://localhost:3000/login/',{email,password})
     .then(result =>{
         console.log(result);
-        if(result.data === 'suucess'){
+        if(result.data === 'success'){
             setMsg('User login successfully!!');
             setTimeout(()=>{
                 naviagte('/dashboard')
-            })
+            },2000)
         }else{
             setMsg('Someting is wrong!!');
         }
@@ -48,7 +48,7 @@ const handleLogin = (e)=>{
                     <label htmlFor="email">Password</label>
                     <input type="password" name='password' className='form-control' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} required />
                 </div>
-                <button className='btn btn-primary '>login</button>
+                <button type='submit' className='btn btn-primary '>login</button>
                 </form>
                 <hr />
                 <p>If not registered please go for register Here!!</p>
