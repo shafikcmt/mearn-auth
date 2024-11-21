@@ -14,10 +14,15 @@ function Signup() {
         axios.post('http://localhost:3000/register/',{name,email,password})
         .then(result => {
             console.log(result)
-            setMsg('User Registered Successfully!!');
-            setTimeout(()=>{
-                navigate('/login')
-            },2000)
+            if(result.data === 'success'){
+                setMsg('User Registered Successfully!!');
+                setTimeout(()=>{
+                    navigate('/login')
+                },2000)
+            }else{
+                setMsg('Something is wrong!!');
+            }
+           
         })
         .catch(err => console.log(err))
     }
