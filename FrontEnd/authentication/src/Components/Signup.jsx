@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import Navigation from './Navigation';
 function Signup() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -28,6 +29,8 @@ function Signup() {
     }
 
   return (
+    <>
+    <Navigation />
    <div className='d-flex justify-content-center align-items-center vh-100 bg-info'>
         <div className='bg-white p-3 rounded w-50'>
             <div className="card">
@@ -65,6 +68,7 @@ function Signup() {
             </div>
         </div>
    </div>
+   </>
   )
 }
 

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navigation from './Navigation';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -25,6 +26,8 @@ const handleLogin = (e)=>{
 }
 
   return (
+    <>
+    <Navigation />
     <div className='d-flex justify-content-center align-items-center vh-100 bg-info'>
     <div className='bg-white p-3 rounded w-50'>
         <div className="card">
@@ -58,6 +61,7 @@ const handleLogin = (e)=>{
         </div>
     </div>
 </div>
+</>
   )
 }
 
