@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose')
 const app = express();
 const registerModel = require('./Models/Register');
+const postModel = require('./Models/Post');
 const bcrypt = require('bcrypt');
 
 app.use(express.json());

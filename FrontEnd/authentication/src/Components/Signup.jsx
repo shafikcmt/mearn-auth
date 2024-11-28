@@ -29,7 +29,7 @@ function Signup() {
     }
 
   return (
-    <>
+    <div className='container'>
     <Navigation />
    <div className='d-flex justify-content-center align-items-center vh-100 bg-info'>
         <div className='bg-white p-3 rounded w-50'>
@@ -68,7 +68,7 @@ function Signup() {
             </div>
         </div>
    </div>
-   </>
+   </div>
   )
 }
 
